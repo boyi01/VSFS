@@ -29,7 +29,7 @@ Für einen Überblick sorgt zudem auch das zusätzliche Video.
 <h1>Webseite:</h1>
 
 
-<p><a href="https://htmlpreview.github.io/?https://github.com/boyi01/VSFS/blob/master/webseite_mit_server/index.html">Hier geht es zur VSFS-Webseite</a></p>
+<p><a href="http://htmlpreview.github.io/?http://github.com/boyi01/VSFS/blob/master/webseite_mit_server/index.html">Hier geht es zur VSFS-Webseite</a></p>
 <p>Zum Anmelden bitte den User "s150239" nutzen </p> 
 Sollte der Chat nicht funktionieren, so ist der Amazon-Server ausgelaufen, bitte <a href="https://htmlpreview.github.io/?https://github.com/boyi01/VSFS/blob/master/website_ohne_server/index.html">diese</a> Variante nutzten, "npm install websocket" ausführen und server2.js mit node starten.
 
