@@ -1,0 +1,243 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>reveal.js</title>
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/black.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+				  <section>		<h1>TypedArray</h1>
+						<h3>BINÄRE DATEN IN JAVASCRIPT</h3>
+						<p>
+							<small>Created by Christoph Becker</small>
+						</p>
+					</section>
+					<section>
+						<ul>
+							<li class="fragment fade-in">Kompakte Daten</li>
+							<li class="fragment fade-in">Plattformübergreifend</li>
+							<li class="fragment fade-in">Performanter</li>
+						</br>
+							<li class="fragment fade-in">Individuelle Strucktur</li>
+
+						</ul>
+					</section>
+				</section>
+				<section>
+
+						<h2> Das Klassiche Array </h2>
+					  <p class="fragment fade-id"> var cars = ["Saab", "Volvo", "BMW"];</p>
+						<p> <span class="fragment fade-id"> console.log(cars[0])  =   </span><span class="fragment fade-id"> "Saab"</span> </p>
+
+				</section>
+
+				<section>
+				<section>
+					<h2>TypedArray</h2>
+					<ul>
+						<li class="fragment fade-in">Kein Array (Array.isArray() // return false )</li>
+						<li class="fragment fade-in">Gibt Buffers und Views</li>
+				  </ul>
+
+				</section>
+				<section>
+					<h2>ArrayBuffer</h2>
+					<ul>
+						<li class="fragment fade-in">Datentyp mit festgelegter Länge</li>
+						<li class="fragment fade-in">Keine Zugriffe möglich</li>
+						<li class="fragment fade-in">var b = new ArrayBuffer("AnzahlBytes");</li>
+				  </ul>
+				</section>
+
+				<section>
+					<h2>TypedArray views</h2>
+					<li class="fragment fade-in">N View → Buffer</li>
+					<li class="fragment fade-in">View kann benutzt werden wie Array</li>
+					<li class="fragment fade-in">Eindeutiger Datentyp</li>
+				</section>
+				<section>
+					<table>
+								<td >Type</td>
+								<td >Size in bytes</td>
+								<td >Description</td>
+
+								<tr><td>Int8Array</td><td>	1</td> <td>
+								8-Bit-Integer mit Vorzeichen</td>
+								<tr><td>Uint8Array</td>	<td>1	</td><td>
+								8-Bit-Integer ohne Vorzeichen</td>
+								<tr><td>Uint8ClampedArray</td><td>1</td><td>Begrenzt auf 0-255</td>
+
+								<tr><td>Float32Array	</td><td>4	</td><td>
+								32-Bit-Gleitkommazahl</td>
+
+
+					</table>
+
+				</section>
+			</section>
+			<section>
+				<section>
+
+					<h2>Code</h2>
+
+				</section>
+				<section>
+					<h2>Buffer erstellen</h2>
+					<p class="fragment fade-in">
+						var [VariabelName] = new ArrayBuffer([AnzahlBytes]);
+
+					</p>
+					<p class="fragment fade-in">
+						var buffer = new ArrayBuffer(16);
+					</p>
+				</section>
+				<section>
+					<h2>View erstellen</h2>
+					<p class="fragment fade-in">
+						var [VariabelName] = new [Typ]([buffer],{StartByte},{Länge_in_Byte});
+
+					</p>
+					<p class="fragment fade-in">
+						var int32View = new Int32Array(buffer)
+					</p>
+
+				</section>
+				<section>
+
+    <table >
+      <thead>
+	<tr>
+	  <th><i>var</i></th><th colspan="8"><i>index</i></th>
+	</tr>
+      </thead>
+      <tbody>
+	<tr style="font-size: small;">
+	  <td></td><td colspan="8"><i>bytes (not indexable)</i></td>
+	</tr>
+	<tr >
+	  <td>b = </td><td>0</td><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td><td>7</td>
+	</tr>
+	<tr style="font-size: small;">
+	  <td></td><td colspan="8"><i>indices</i></td>
+	</tr>
+	<tr>
+	  <td>v1 = </td><td colspan="4" >0</td><td colspan="4">1</td>
+	</tr>
+	<tr>
+	  <td>v2 = </td><td colspan="2" style="background: #aaa"></td><td>0</td><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td>
+	</tr>
+	<tr>
+	  <td>v3 = </td><td colspan="2" style="background: #aaa"></td><td colspan="2">0</td><td colspan="2">1</td><td colspan="2" style="background: #aaa"></td>
+	</tr>
+      </tbody>
+    </table>
+		<small><p>var v1 = new Int32Array(b);</p>
+		<p>var v2 = new Uint8Array(b, 2);</p>
+		<p>var v3 = new Int16Array(b, 2, 2);</p></small>
+				</section>
+			</section>
+<section>
+	<h2>Beispiel</h2>
+	<section>
+
+
+		<p> var buffer = new ArrayBuffer(	<input id="Größe_Buffer"  placeholder="Bytes" type="number" min="0" size="4" value="16">);</p>
+		<p>
+			var View = new <select id="View_Typ" name="View_Typ">
+  <option value="Int8Array">Int8Array</option>
+  <option value="Uint8Array">Uint8Array</option>
+  <option value="Uint8ClampedArray">Uint8ClampedArray</option>
+  <option value="Int16Array">Int16Array</option>
+	<option value="Uint16Array">Uint16Array</option>
+	<option value="Int32Array">Int32Array</option>
+	<option value="Uint32Array">Uint32Array</option>
+	<option value="Float32Array">Float32Array</option>
+	<option value="Float64Array">Float64Array</option>
+</select>(buffer);
+		</p>
+		<p>
+		for (var  i = 0; i < View.length; i++) {</p><p>
+		View[i] =  <input id="addierer"  placeholder="i*2" size="10" value="i*2">};</p>
+
+
+		<p onclick=" var buffer = new ArrayBuffer(document.getElementById('Größe_Buffer').value);
+		var deff='var View = new '+ document.getElementById('View_Typ').value+'(buffer);' ;
+		eval(deff);
+		var adder =document.getElementById('addierer').value
+	for (var  i = 0; i < View.length; i++) {
+	View[i] = eval(adder) };
+
+
+	var ausgabe ='' ;
+	for  (var  i = 0; i < View.length; i++) { ausgabe = ausgabe + i + '|' + View[i] +'      ' ;} ;
+	document.getElementById('ergebnis').innerHTML=ausgabe" >Start</p>
+		<p id="ergebnis"> Hier erscheint das Ergebniss </p>
+	</section>
+</section>
+
+			<section>
+				<section>
+				<h2>API's</h2>
+				</section>
+			<section>
+			<p>	FileReader.prototype.readAsArrayBuffer()</p>
+			<p>Die FileReader.prototype.readAsArrayBuffer() Methode liest den Inhalt aus einem gegebenen Blob oder einer Datei.</p>
+</section>
+			<section>
+			<p>XMLHttpRequest.prototype.send()</p>
+			<p>Die send() Methode einer XMLHttpRequest-Instanz unterstützt nun Typed Arrays und ArrayBuffer Objekte als Argument.</p>
+			</section>
+			<section>
+			<p>ImageData.data</p>
+			<p>Ein Uint8ClampedArray welches die Daten in der RGBA-Reihenfolge enthält, mit Integer-Werten zwischen 0 und 255 inklusiv.</p>
+			</section>
+			</section>
+			<section>
+				<section>
+				<h1>Fragen?</h1>
+				</section>
+				<section>
+				<h1>	Vielen Dank für ihre Aufmerksamkeit</h1>
+				</section>
+			</section>
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				history: true,
+					transition: 'convex' ,
+				// More info https://github.com/hakimel/reveal.js#dependencies
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+		</script>
+	</body>
+</html>
