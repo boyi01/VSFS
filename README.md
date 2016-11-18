@@ -5,7 +5,7 @@
 Guten Tag bei "Von Studenten für Studenten",
 
 unsere Seite ist darauf ausgelegt das Lernen der Studenten zu erleichtern. 
-Egal ob bei Gruppenarbeiten oder beim Definitionen lernen - wir helfen Ihnen!
+egal ob beim bewältigen von Gruppenaufgsben oder dem lernen von Definitionen - wir helfen Ihnen!
 
 Unsere Webseite verfügt über einen Live-Chat und die Möglichkeit gemeinsam an Gruppenarbeiten zu arbeiten.
 
