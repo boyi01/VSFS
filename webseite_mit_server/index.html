@@ -1,0 +1,219 @@
+<!doctype html>
+<html>
+<head>
+	<!--einbindung css-->
+	<link rel="stylesheet" type="text/css" href="new_file.css"></style>
+<!--einbindung js-->
+<!--<script src="suser.js"></script>-->
+<script src="main_javascript.js"></script>
+
+
+<meta charset="utf-8">
+<title>VSFS</title>
+
+    </head>
+
+    <body>
+<!--Statischer Bereich-->
+<!--um es optisch zu verschönern hab ich jetzt den Spaß hier etwas ausgemistet-->
+<!--bitte beachtet, wenn ihr Kommentare macht sie auch richtig zu kennzeichnen-->
+
+<div>
+
+<nav>
+
+<!--Falls ihr wollt könnte ich auch ein ausklappbares Navi machen allerdings
+müsste man dann auch wissen was man dann ausklappbares drin haben möchte...-->
+
+	<ul>
+		<li>
+			<a onclick="zu_Seite('Startseite')"; class="Button2">Start</a>
+		</li>
+
+
+
+
+        <li>
+            <a onclick="zu_Seite('upload')"; class="Button2">Upload</a>
+        </li>
+
+				<li>
+					 <a onclick="zu_Seite('Definitionen');" class="Button2"> Definitionen </a>
+			 </li>
+			 <li>
+					<a onclick="zu_Seite('Gruppenarbeit');" class="Button2"> Gruppenarbeit </a>
+			</li>
+			<li>
+				<a id="Chat_anmelden_button" onclick="zu_Seite('Chat')"; class="Button2">Chat anmelden</a>
+			</li>
+
+        <li>
+            <a id="Kurswahl_button" onclick="zu_Seite('kurs_wahl')"; class="Button2">zur Kurswahl</a>
+        </li>
+				<li>
+            <a id="Fachwahl_button" onclick="zu_Seite('fach_wahl')"; class="Button2">zur Fachwahl</a>
+        </li>
+
+
+	</ul>
+
+</nav>
+
+				<img src="unserLogo.png" alt="" class="js-2 logo">
+
+<div class=" pos-dh">
+
+					<img src="dasistsotoll.png" alt="" class="js img">
+
+</div>
+
+</div>
+
+
+
+
+<!--Startseiteninahlt-->
+	<article id="Startseite">
+
+			<h1 class="font-55">Herzlich Willkommen!<br></h1>
+			<p class="font-5">
+				Diese Website „Von Studenten, für Studenten“ wurde extra für Euch erstellt!</br>
+				Habt ihr Probleme mit dem Lernstoff?</br>
+				Habt ihr nicht mitgeschrieben und braucht Informationen?</br>
+				Wollt ihr euch für eine Klausur vorbereiten?</br></br>
+				Dann seid ihr hier genau richtig!</br>
+				Sucht euch euren Kurs und das Fach aus um Definitionen zu lernen oder nehmt am Live-Chat teil.</br></br>
+			</p>
+			<p class="font-555">Viel Spaß beim stöbern!</p>
+
+	</article>
+
+<article id="Chat" style="display:none;">
+
+	<h1 class="font-55">Hier bitte Chatname und Chatraum eingeben!</h1>
+	<p> Chatname: <input id="chatname" style="width: 300px;"></input> </p>
+	<p> Chatraum: <input id="chatraum" style="width: 300px;"></input> </p>
+	<p><a onclick="chat_einlogen()"; class="Button2">Anmelden</a> </p>
+</article>
+
+
+
+	<!--style="display:none;" muss fast jeden elemet inzugefügt werden damit zum start alles weg ist-->
+
+	<!-- Upload Bereich -->
+
+        <article id="upload" style="display:none;">
+					<div>
+						<img id="fullscreen-img1" class="fullscreen" src="1_original.jpg" width="100" height="100" />
+							<img id="fullscreen-img2" class="fullscreen" src="PhotoScan.jpg" width="100" height="100"/>
+					</div>
+            <div id="drop_zone">Drop files here</div>
+            <output id="list"></output>
+            <script language="javascript" type="text/javascript" src="javascript.js"></script>
+
+
+
+        </article>
+
+
+
+
+<article id="Definitionen" style="display:none;">
+
+        <h1 class="font-55">Definitionen von A-Z<br></h1>
+				<form action="#">
+				<label>Definition:
+					<select id="definitions_auswahl">
+						<option value="1">Def. nicht auswählen</option>
+
+					</select>
+				</label>
+
+					<input type="checkbox" id="deffcheck" value="deff_ueben" >Definitionen ausblenden zum Üben<br>
+
+			</form>
+		<p>	<article id="deff_div" style="height: 200px; width: 400px; " >
+		</article>
+			
+			<textarea id="inputt-div" style="display:none; width: 80px; height: 60px;" > </textarea>
+			
+			<a onclick="ueberpruefen()" class="Button2" id="deff_button" style="margin-left: 10%; margin-top: 12%;">Weiter </a>
+
+
+
+</article>
+
+<article id="kurs_wahl" style="display:none;">
+<h1 class="font-55"> Bitte Wähle Deinen Kurs </h1>
+	<ul>
+
+		<li>
+			<a  onclick="kurswahl('wwi15ama')" class="Button2">WWI15AMA</a>
+		</li>
+
+		<li>
+			<a onclick="kurswahl('wwi15amb')" class="Button2">WWI15AMB</a>
+		</li>
+
+		<li>
+			<a onclick="kurswahl('wwi15amc')" class="Button2">WWI15AMC</a>
+		</li>
+	</ul>
+</article>
+<article id="fach_wahl" style="display:none;">
+<h1 Projekt_fertig> Bitte Wähle Dein Fach </h1>
+	<ul>
+
+		<li>
+			<a  onclick="fachwahl('VWL')" class="Button2 Buttonbreite3">VWL</a>
+		</li>
+
+		<li>
+			<a onclick="fachwahl('IT')" class="Button2 Buttonbreite3">IT</a>
+		</li>
+
+		<li>
+			<a onclick="fachwahl('Java')" class="Button2 Buttonbreite3">Java</a>
+		</li>
+	</ul>
+</article>
+<article id="Gruppenarbeit" style="display:none;">
+<h1 class="font-55 ">Hier könnt ihr zusammen an einem Dokument schreiben</h1>
+<textarea id="gemeisamer_Text">
+</textarea>
+
+
+</article>
+
+<div>
+<img src="dasistsotoll2.png" alt="" style="width: 6px; height: 734px; margin-top:1%; margin-left:8%;">
+	<h1 id="chateinloggen" class="font-chateinl chath1unddiv1" >Für den Live-Chat bitte einloggen<br></h1>
+	<aside id="send-message" style="display:none;" class="chataside">
+
+			<center>
+
+			<h1  class="font-55 chath1unddiv">Live-Chat<br></h1>
+
+			<div id="chat" class="font-5 chath1unddiv chatverlaufbox" ></div>
+
+			<ul>
+			<input  class="chatboxtippen" size="35" id="message" ></input>
+			</ul>
+
+			<ul>
+			<a  style=" margin-top: 2%;" class="Button2 Buttonbreite3"  onclick="nachricht_senden()">Senden</a>
+			</ul>
+
+			</center>
+	</aside>
+</div>
+
+
+
+</div>
+
+
+
+
+    </body>
+</html>

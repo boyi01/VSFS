@@ -1,0 +1,335 @@
+
+/*body von der Anfangsseite*/
+.body1 {
+
+		background-size: 120%;
+        background-image: url("file:///Users/valerie/Desktop/dhbw_mannheim.jpg");
+
+}
+
+/*wichtig damit der Navibereich oben nicht übereinander sondern nebeneinander*/
+
+nav li {
+    display: inline-block;
+
+}
+
+/*hierdurch positionierung des Navibereiches*/
+
+nav ul {
+   margin-left: -3.5%;
+    margin-top: 0px;
+    margin-bottom: -2px;
+
+}
+
+#drop_zone {
+    border: 2px dashed #bbb;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    padding: 25px;
+    text.align: center;
+    font: 20pt bold 'Vollkorn';
+    color: #bbb;
+}
+/*  Diese Buttons waren kurz in benutzung, aufbewahrt falls doch nochmal notwendig
+
+.Button3 {
+	-moz-box-shadow:inset 0px 0px 0px 0px #cf866c;
+	-webkit-box-shadow:inset 0px 0px 0px 0px #cf866c;
+	box-shadow:inset 0px 0px 0px 0px #cf866c;
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #d0451b), color-stop(1, #bc3315));
+	background:-moz-linear-gradient(top, #d0451b 5%, #bc3315 100%);
+	background:-webkit-linear-gradient(top, #d0451b 5%, #bc3315 100%);
+	background:-o-linear-gradient(top, #d0451b 5%, #bc3315 100%);
+	background:-ms-linear-gradient(top, #d0451b 5%, #bc3315 100%);
+	background:linear-gradient(to bottom, #d0451b 5%, #bc3315 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#d0451b', endColorstr='#bc3315',GradientType=0);
+	background-color:#d0451b;
+	border:2px solid #d13617;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:11px;
+	padding:2px 24px;
+	text-decoration:none;
+	text-shadow:0px 0px 0px #854629;
+}
+.Button3:hover {
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #bc3315), color-stop(1, #d0451b));
+	background:-moz-linear-gradient(top, #bc3315 5%, #d0451b 100%);
+	background:-webkit-linear-gradient(top, #bc3315 5%, #d0451b 100%);
+	background:-o-linear-gradient(top, #bc3315 5%, #d0451b 100%);
+	background:-ms-linear-gradient(top, #bc3315 5%, #d0451b 100%);
+	background:linear-gradient(to bottom, #bc3315 5%, #d0451b 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#bc3315', endColorstr='#d0451b',GradientType=0);
+	background-color:#bc3315;
+}
+.Button3:active {
+	position:relative;
+	top:1px;
+}
+
+
+
+.myButton {
+
+	margin-top:80px;
+	-moz-box-shadow: 3px 4px 0px 0px #899599;
+	-webkit-box-shadow: 3px 4px 0px 0px #899599;
+	box-shadow: 3px 4px 0px 0px #899599;
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #ededed), color-stop(1, #bab1ba));
+	background:-moz-linear-gradient(top, #ededed 5%, #bab1ba 100%);
+	background:-webkit-linear-gradient(top, #ededed 5%, #bab1ba 100%);
+	background:-o-linear-gradient(top, #ededed 5%, #bab1ba 100%);
+	background:-ms-linear-gradient(top, #ededed 5%, #bab1ba 100%);
+	background:linear-gradient(to bottom, #ededed 5%, #bab1ba 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ededed', endColorstr='#bab1ba',GradientType=0);
+	background-color:#ededed;
+	-moz-border-radius:19px;
+	-webkit-border-radius:19px;
+	border-radius:19px;
+	border:1px solid #d6bcd6;
+	display:inline-block;
+	cursor:pointer;
+	color:#3a8a9e;
+	font-family:Trebuchet MS;
+	font-size:17px;
+	padding:15px 47px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #e1e2ed;
+}
+.myButton:hover {
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #bab1ba), color-stop(1, #ededed));
+	background:-moz-linear-gradient(top, #bab1ba 5%, #ededed 100%);
+	background:-webkit-linear-gradient(top, #bab1ba 5%, #ededed 100%);
+	background:-o-linear-gradient(top, #bab1ba 5%, #ededed 100%);
+	background:-ms-linear-gradient(top, #bab1ba 5%, #ededed 100%);
+	background:linear-gradient(to bottom, #bab1ba 5%, #ededed 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#bab1ba', endColorstr='#ededed',GradientType=0);
+	background-color:#bab1ba;
+}
+.myButton:active {
+	position:relative;
+	top:1px;
+}
+
+
+*/
+
+/*Button 2 für Navi und Defs*/
+
+.Button2 {
+	-moz-box-shadow:inset 0px 0px 0px 0px #cf866c;
+	-webkit-box-shadow:inset 0px 0px 0px 0px #cf866c;
+	box-shadow:inset 0px 0px 0px 0px #cf866c;
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #d0451b), color-stop(1, #bc3315));
+	background:-moz-linear-gradient(top, #d0451b 5%, #bc3315 100%);
+	background:-webkit-linear-gradient(top, #d0451b 5%, #bc3315 100%);
+	background:-o-linear-gradient(top, #d0451b 5%, #bc3315 100%);
+	background:-ms-linear-gradient(top, #d0451b 5%, #bc3315 100%);
+	background:linear-gradient(to bottom, #d0451b 5%, #bc3315 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#d0451b', endColorstr='#bc3315',GradientType=0);
+	background-color:#DC143C;
+	border:2px solid #d13617;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:sans-serif;
+	text-align: center;
+	font-size:13px;
+	padding:12px 30px;
+	text-decoration:none;
+	text-shadow:0px 0px 0px #854629;
+}
+.Button2:hover {
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #bc3315), color-stop(1, #d0451b));
+	background:-moz-linear-gradient(top, #bc3315 5%, #d0451b 100%);
+	background:-webkit-linear-gradient(top, #bc3315 5%, #d0451b 100%);
+	background:-o-linear-gradient(top, #bc3315 5%, #d0451b 100%);
+	background:-ms-linear-gradient(top, #bc3315 5%, #d0451b 100%);
+	background:linear-gradient(to bottom, #bc3315 5%, #d0451b 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#bc3315', endColorstr='#d0451b',GradientType=0);
+	background-color:#bc3315;
+}
+.Button2:active {
+	position:relative;
+	top:1px;
+}
+
+
+.ao{margin-top:14px; margin-bottom:3px}
+
+.versteck{visibility: hidden;}
+.zeig{visibility:visible}
+
+/* hierdurch nur ein Button notwendig, da ich hier die Buttonbreite individuell einstellen kann*/
+
+.Buttonbreite{width: 13px}
+.Buttonbreite2{width: 30px}
+.Buttonbreite3{width: 40px}
+
+.h120 {font-family: Trebuchet MS; color: Crimson; font-weight: bold;
+            text-align: center; font-size: 15mm; margin-top:80px}
+
+.h220 {font-family: Trebuchet MS; color: IndianRed; font-weight: lighter;
+            text-align: center; font-size: 5mm; margin-top:30px}
+
+
+/*kein Leerraum im Body, dadurch größer*/
+body {
+    margin: 0
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup,
+main, nav, section, summary {
+    display: block
+}
+
+
+
+/*ist dafür da, dass die Buttons oben zusammenbeppen*/
+div {
+    font-size: 0;
+}
+
+/*damit die Navis nicht als Liste aufgeführt werden mit Punkt*/
+ul {
+    list-style-type: none;
+}
+
+/*positionierung des Logos*/
+.pos-dh {
+    position: absolute;
+   	left: 0;
+    margin-top: 0;
+
+}
+
+
+/*Hauptbild DHBW*/
+.img {
+    position: absolute;
+    left: 0;
+    width: 1280px;
+    height: 20px;
+    top: 2px;
+    border: 0;
+}
+
+.img2 {
+    position: absolute;
+    left: 0;
+    width: 1280px;
+    height: 20px;
+    top: 2px;
+    border: 0;
+}
+
+/*design aller articles*/
+
+article {
+
+  margin-left: 2%;
+   margin-top: 4%;
+  padding: 5px;
+  float: left;
+  width: 600px;
+  font-size: 1em;
+  text-align: left;
+  line-height: 24px;
+  font-family: georgia,calibri,serif;
+}
+
+.poschat{
+	position: relative;
+	 margin-left: 20%;
+  	width: 525px;
+   margin-top: 50%;
+   float: right;
+}
+
+
+.logo {
+    position: absolute;
+    right: 11px;
+    width: 50px;
+    height: 40px;
+    top: 2px;
+    border: 0;
+}
+
+/*Schriftarten*/
+
+.font-5 {
+    font-family: sans-serif;
+    font-size: 12.00pt;
+    font-weight: 400;
+    font-style: normal;
+    text-decoration: none;
+    line-height: 22.19pt;
+    letter-spacing: normal;
+}
+
+.font-55 {
+    font-family: sans-serif;
+    font-size: 30.00pt;
+    font-weight: 400;
+    font-style: bold;
+    text-decoration: none;
+    color: #DC143C;
+    line-height: 25.19pt;
+    letter-spacing: normal;
+}
+
+.font-chateinl {
+    font-family: sans-serif;
+    font-size: 15pt;
+    font-weight: 400;
+    font-style: bold;
+    text-decoration: none;
+    color: #DC143C;
+    line-height: 22.19pt;
+    letter-spacing: normal;
+}
+
+.font-555 {
+    font-family: sans-serif;
+    font-size: 12.00pt;
+    font-weight: 400;
+    font-style: italic;
+    text-decoration: none;
+    line-height: 22.19pt;
+    letter-spacing: normal;
+}
+
+.pos-133{
+
+    margin-left: %;
+    margin-top: -38.3%;
+}
+
+/*wirkt sich nur auf Definitionen aus, braucht man, damit die Buttons schmaler sind*/
+
+.colwrapper-2 {
+    line-height: 0;
+}
+
+/*hier ist der chat*/
+
+.chataside {float: right; margin-top: 5%; margin-right: 10%;}
+.chath1unddiv{margin-left: 30px;}
+.chath1unddiv1{margin-left: 70%; margin-top: -51.5%;}
+.chatverlaufbox{width: 250px; height: 200px; overflow:auto;}
+.chatboxtippen{width: 250px; height: 40px; margin-top: 30px;}
+
+/*Definitionenseite*"
+.ulpos {margin-left: 45%; position: absolute; top: 6%} */
+
+.fullscreen:-webkit-full-screen  { width: 100%; height: 100% }
+.fullscreen:-moz-full-screen     { width: 100%; height: 100% }
+.fullscreent:-ms-full-screen      { width: 100%; height: 100% }
+.fullscreen:-o-full-screen       { width: 100%; height: 100% }
+.fullscreen:fullscreen          { width: 100%; height: 100% }
